@@ -1,0 +1,74 @@
+---
+title: "Homework2ArmstrongAlex"
+output: html_document
+---
+```{r}
+
+# Question 2a: solve the equations x + 3y = 19 and 2x + 5y = 33 
+
+# make matrix of Xs and Ys
+firstpart <- matrix(c(2, 1, 5, 3),nrow=2,ncol=2)
+
+# make matrix of answers
+secondpart <- matrix(c(33,19),nrow=2,ncol=1)
+
+answer <- solve(firstpart,secondpart)
+answer
+
+```
+```{r}
+
+# Question 2b: make a vector of 1 to 100 and caluclate average without using 'mean'
+
+# create vector
+vector <- (1:100)
+
+# divide sum by number of elements
+av <- (sum(vector))/100
+av
+```
+```{r}
+
+# Question 2c: install dplyr package
+install.packages("dplyr")
+```
+
+
+```{r}
+
+# Question 3: create data frame
+question <- data.frame(first_column = c("A", "D"),
+                      second_column = c("B", "E"), 
+                      third_column = c("C", "F"), 
+                      forth_column = c("D","G")
+                        )
+question
+```
+
+
+
+
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
